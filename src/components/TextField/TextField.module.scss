@@ -1,0 +1,28 @@
+@use "./../../assets/partials/palette.scss";
+@use "./../../assets/partials/devices.scss";
+
+.TextField {
+    border: none;
+    padding: 4px 3px;
+    font-family: inherit;
+    background-color: inherit;
+    color: palette.$dark-brown;
+
+    @include devices.phone {
+        font-size: 1rem;
+        max-width: 12.75rem;
+    }
+
+    @include devices.large-phone {
+        max-width: 15rem;
+        font-size: 1rem;
+    }
+
+    @include devices.laptop {
+        font-size: 1.15rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

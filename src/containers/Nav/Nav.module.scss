@@ -1,0 +1,60 @@
+@use "./../../assets/partials/devices.scss";
+@use "./../../assets/partials/palette.scss";
+
+.Nav {
+    display: flex;
+    background-color: palette.$cream;
+
+    &_left {
+        display: flex;
+        height: auto;
+        column-gap: 0.8rem;
+    }
+
+    &_right {
+        display: flex;
+        height: auto;
+        column-gap: 0.8rem;
+    }
+
+    @include devices.phone {
+        position: fixed;
+        bottom: 0;
+        width: 88%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.8rem;
+        margin: 1.8rem auto;
+        padding: 0.5rem 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px 0 rgba(84, 72, 67, 0.2),
+            0 3px 10px 0 rgba(74, 72, 67, 0.2);
+    }
+
+    @include devices.large-phone {
+        position: fixed;
+        bottom: 0;
+        width: 88%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.8rem;
+        margin: 1.8rem auto;
+        padding: 0.5rem 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px 0 rgba(84, 72, 67, 0.2),
+            0 3px 10px 0 rgba(74, 72, 67, 0.2);
+    }
+
+    @include devices.tablet {
+        position: static;
+        border-radius: 0;
+        box-shadow: none;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        height: 4rem;
+        width: 100%;
+    }
+}

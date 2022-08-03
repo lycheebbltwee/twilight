@@ -1,0 +1,99 @@
+@use "./../../assets/partials/palette.scss";
+@use "./../../assets/partials/devices.scss";
+
+.SmallButton {
+    border: 2px solid palette.$dark-brown;
+    border-radius: 3rem;
+
+    // margin: 0 0.5rem;
+
+    &:hover {
+        background-color: palette.$beige;
+    }
+
+    & img {
+        background-color: transparent;
+    }
+
+    & a {
+        background-color: transparent;
+        display: block;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+        overflow: hidden;
+
+        &:link {
+            color: palette.$dark-brown;
+        }
+
+        &:visited {
+            color: palette.$dark-brown;
+        }
+
+        &:active {
+            color: palette.$dark-brown;
+        }
+
+        &:focus {
+            color: palette.$dark-brown;
+            background-color: palette.$beige;
+        }
+    }
+
+    & > div {
+        height: 100%;
+        text-align: center;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    @include devices.phone {
+        width: 2.65rem;
+        height: 2.5rem;
+        min-width: 1.15rem;
+        min-height: 1rem;
+
+        & img {
+            max-width: 72%;
+            max-height: 72%;
+            padding: 0.35rem;
+        }
+    }
+
+    @include devices.large-phone {
+        width: 2.8rem;
+        height: 2.65rem;
+
+        & img {
+            max-width: 72%;
+            max-height: 72%;
+            padding: 0.35rem;
+        }
+    }
+
+    @include devices.tablet {
+        width: 4.5rem;
+        height: 2.5rem;
+
+        & img {
+            height: 65%;
+            margin: auto;
+            padding: 0.4rem;
+        }
+    }
+
+    @include devices.laptop {
+        width: 5rem;
+        height: 3rem;
+
+        & img {
+            height: 60%;
+            padding: 0.5rem;
+        }
+    }
+}
+
+.active {
+    background-color: palette.$beige;
+}

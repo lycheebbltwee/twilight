@@ -1,0 +1,7 @@
+.App {
+    margin: 2.5% auto;
+    box-sizing: border-box;
+    inline-size: 94%;
+    block-size: 90%;
+    padding: 3%;
+}

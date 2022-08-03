@@ -1,0 +1,15 @@
+@use "./../../assets/partials/devices.scss";
+
+.ProductCard {
+    & img {
+        margin-bottom: 0.5rem;
+    }
+
+    & > p > span {
+        font-weight: 700;
+    }
+
+    @include devices.phone {
+        width: 250px;
+    }
+}

@@ -1,0 +1,9 @@
+@use "./../../assets/partials/devices.scss";
+
+.Footer {
+    text-align: center;
+
+    @include devices.phone {
+        padding-bottom: 5rem;
+    }
+}

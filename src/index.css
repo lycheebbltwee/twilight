@@ -1,0 +1,33 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html {
+    background-color: #f2e8e3;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: botanika-mono-web, monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 2.5% auto;
+    box-sizing: border-box;
+    max-inline-size: 1400px;
+    max-block-size: 695px;
+    padding: 3%;
+    color: #6b4a3e;
+    position: relative;
+}
+
+h1 {
+    font-family: ballare, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8rem;
+}
