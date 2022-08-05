@@ -1,14 +1,18 @@
 import React from "react";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+    const { name, price, imageLink } = product;
+
     return (
         <div className={styles.ProductCard}>
-            <img src="https://via.placeholder.com/250x330" alt="placeholder" />
+            <div>
+                <img src={imageLink} alt={name} />
+            </div>
             <p>
-                <span>Product Name</span>
+                <span>{name}</span>
             </p>
-            <p>Price</p>
+            <p>{price}</p>
         </div>
     );
 };

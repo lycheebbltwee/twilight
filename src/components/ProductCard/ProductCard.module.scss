@@ -2,11 +2,18 @@
 
 .ProductCard {
     & img {
-        margin-bottom: 0.5rem;
+        height: 100%;
     }
 
     & > p > span {
         font-weight: 700;
+    }
+
+    & > div {
+        overflow: hidden;
+        margin-bottom: 0.7rem;
+        width: 250px;
+        height: 300px;
     }
 
     @include devices.phone {
