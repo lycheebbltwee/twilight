@@ -1,12 +1,12 @@
 import React from "react";
-import Carousel from "../../components/Carousel/Carousel";
+import CarouselContainer from "../../components/CarouselContainer/CarouselContainer";
 import IntroText from "../../components/IntroText/IntroText";
 import styles from "./Home.module.scss";
 
-const Home = () => {
+const Home = ({ productData }) => {
     return (
         <section className={styles.Home}>
-            <Carousel />
+            <CarouselContainer products={productData} />
             <IntroText />
         </section>
     );

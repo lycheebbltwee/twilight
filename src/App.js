@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -23,12 +24,12 @@ function App() {
         <BrowserRouter>
             <Nav />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home productData={products} />} />
                 <Route
                     path="/products"
                     element={<ProductGrid productData={products} />}
                 />
-                <Route path="/product" element={<h1>Product Page</h1>} />
+                <Route path="" element={<h1>Product Page</h1>} />
                 <Route path="/favourites" element={<h1>Favourites</h1>} />
                 <Route path="/cart" element={<h1>Cart</h1>} />
             </Routes>

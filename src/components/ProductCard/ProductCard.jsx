@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
             <p>
                 <span>{name}</span>
             </p>
-            <p>{price}</p>
+            <p>${price}</p>
         </div>
     );
 };

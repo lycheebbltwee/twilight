@@ -1,0 +1,11 @@
+@use "./../../assets/partials/devices.scss";
+@use "./../../assets/partials/palette.scss";
+
+.CarouselContainer {
+    width: 90vw;
+
+    &_img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

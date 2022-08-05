@@ -4,4 +4,7 @@
     inline-size: 94%;
     block-size: 90%;
     padding: 3%;
+    background-color: #f2e8e3;
+    font-family: botanika-mono-web, monospace;
+    font-weight: 400;
 }

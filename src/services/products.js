@@ -5,6 +5,7 @@ price: number,
 imageLink: string,
 stock: number,
 favourite: boolean
+featured: boolean
 */
 
 export const products = [
@@ -17,6 +18,7 @@ export const products = [
             "https://images.pexels.com/photos/7319105/pexels-photo-7319105.jpeg",
         stock: 80,
         favourite: false,
+        featured: false,
     },
     {
         name: "Clay Bulb Lamp",
@@ -27,6 +29,7 @@ export const products = [
             "https://images.pexels.com/photos/1166643/pexels-photo-1166643.jpeg",
         stock: 250,
         favourite: false,
+        featured: false,
     },
     {
         name: "Camping Decorative Lamp",
@@ -37,6 +40,7 @@ export const products = [
             "https://images.pexels.com/photos/5461603/pexels-photo-5461603.jpeg",
         stock: 220,
         favourite: false,
+        featured: false,
     },
     {
         name: "Nautical Outdoor Lamp",
@@ -47,6 +51,7 @@ export const products = [
             "https://images.pexels.com/photos/6342147/pexels-photo-6342147.jpeg",
         stock: 150,
         favourite: false,
+        featured: true,
     },
     {
         name: "Single Drop Orb Pendant",
@@ -57,6 +62,7 @@ export const products = [
             "https://images.pexels.com/photos/3747103/pexels-photo-3747103.jpeg",
         stock: 100,
         favourite: false,
+        featured: false,
     },
     {
         name: "Dish Wall Light",
@@ -67,6 +73,7 @@ export const products = [
             "https://images.pexels.com/photos/8243138/pexels-photo-8243138.jpeg",
         stock: 125,
         favourite: false,
+        featured: false,
     },
     {
         name: "Prism Wall Light",
@@ -77,6 +84,7 @@ export const products = [
             "https://images.pexels.com/photos/8243139/pexels-photo-8243139.jpeg",
         stock: 125,
         favourite: false,
+        featured: false,
     },
     {
         name: "Honey Wall Light",
@@ -87,6 +95,7 @@ export const products = [
             "https://images.pexels.com/photos/8259236/pexels-photo-8259236.jpeg",
         stock: 125,
         favourite: false,
+        featured: false,
     },
     {
         name: "Office Desk Lamp",
@@ -97,6 +106,7 @@ export const products = [
             "https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg",
         stock: 250,
         favourite: false,
+        featured: true,
     },
     {
         name: "Geometric Pendants",
@@ -107,6 +117,7 @@ export const products = [
             "https://images.pexels.com/photos/5137292/pexels-photo-5137292.jpeg",
         stock: 20,
         favourite: false,
+        featured: false,
     },
     {
         name: "Trilight Chandelier",
@@ -117,6 +128,7 @@ export const products = [
             "https://images.pexels.com/photos/1901200/pexels-photo-1901200.jpeg",
         stock: 60,
         favourite: false,
+        featured: true,
     },
     {
         name: "Pill Bedside Lamp",
@@ -127,6 +139,7 @@ export const products = [
             "https://images.pexels.com/photos/6782347/pexels-photo-6782347.jpeg",
         stock: 200,
         favourite: false,
+        featured: false,
     },
     {
         name: "Sliced Orbit Pendant",
@@ -137,6 +150,7 @@ export const products = [
             "https://images.pexels.com/photos/5998136/pexels-photo-5998136.jpeg",
         stock: 80,
         favourite: false,
+        featured: false,
     },
     {
         name: "Steel Dome Pendant",
@@ -147,6 +161,7 @@ export const products = [
             "https://images.pexels.com/photos/6862111/pexels-photo-6862111.jpeg",
         stock: 110,
         favourite: false,
+        featured: true,
     },
     {
         name: "Clay Hat Pendant",
@@ -154,8 +169,9 @@ export const products = [
             "This earthy piece is simplistic in its design and a great addition to any room. Its neutral clay tones make it a classic and timeless fixture, bringing a warm and rustic atmosphere to the space.",
         price: 1849.0,
         imageLink:
-            "https://images.pexels.com/photos/6862111/pexels-photo-6862111.jpeg",
+            "https://images.pexels.com/photos/8063887/pexels-photo-8063887.jpeg",
         stock: 75,
         favourite: false,
+        featured: true,
     },
 ];
