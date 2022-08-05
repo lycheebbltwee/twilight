@@ -1,0 +1,7 @@
+@use "./../../assets/partials/devices.scss";
+
+.Carousel {
+    & img {
+        width: 100%;
+    }
+}

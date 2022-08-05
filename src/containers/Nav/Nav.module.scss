@@ -20,6 +20,8 @@
     @include devices.phone {
         position: fixed;
         bottom: 0;
+        right: 0;
+        left: 0;
         width: 88%;
         flex-direction: row;
         justify-content: center;
@@ -35,6 +37,8 @@
     @include devices.large-phone {
         position: fixed;
         bottom: 0;
+        right: 0;
+        left: 0;
         width: 88%;
         flex-direction: row;
         justify-content: center;
@@ -48,7 +52,8 @@
     }
 
     @include devices.tablet {
-        position: static;
+        position: sticky;
+        position: -webkit-sticky;
         border-radius: 0;
         box-shadow: none;
         justify-content: space-between;

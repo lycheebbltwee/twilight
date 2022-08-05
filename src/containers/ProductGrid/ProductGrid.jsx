@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import styles from "./ProductGrid.module.scss";
 
 const ProductGrid = () => {

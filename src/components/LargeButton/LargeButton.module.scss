@@ -1,0 +1,70 @@
+@use "./../../assets/partials/palette.scss";
+@use "./../../assets/partials/devices.scss";
+
+.LargeButton {
+    // border: 2px solid palette.$dark-brown;
+    border-radius: 3rem;
+    background-color: palette.$beige;
+    transition-duration: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: palette.$dark-brown;
+    }
+
+    & a {
+        background-color: transparent;
+        text-decoration: none;
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 1.2rem;
+
+        &:link {
+            color: palette.$dark-brown;
+        }
+
+        &:visited {
+            color: palette.$dark-brown;
+        }
+
+        &:hover {
+            color: palette.$cream;
+        }
+
+        &:active {
+            color: palette.$dark-brown;
+        }
+
+        &:focus {
+            color: palette.$dark-brown;
+            background-color: palette.$beige;
+        }
+    }
+
+    @include devices.phone {
+        width: 90vw;
+        height: 3rem;
+        margin: 1rem auto;
+    }
+
+    @include devices.large-phone {
+        width: 90vw;
+        height: 2.65rem;
+        margin: 1rem auto;
+    }
+
+    @include devices.tablet {
+        width: 40%;
+        height: 2.5rem;
+        margin: 1rem auto;
+        margin-left: 0;
+    }
+
+    @include devices.laptop {
+        height: 3rem;
+        width: 18rem;
+    }
+}

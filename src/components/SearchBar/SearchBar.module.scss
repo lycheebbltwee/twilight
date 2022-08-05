@@ -16,7 +16,8 @@
     }
 
     @include devices.phone {
-        width: auto;
+        // width: auto;
+        margin: auto;
     }
 
     @include devices.large-phone {

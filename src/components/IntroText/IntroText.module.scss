@@ -1,0 +1,18 @@
+@use "./../../assets/partials/devices";
+
+.IntroText {
+    & p {
+        font-size: 1.2rem;
+    }
+
+    @include devices.phone {
+        & h1 {
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        & p {
+            text-align: center;
+        }
+    }
+}

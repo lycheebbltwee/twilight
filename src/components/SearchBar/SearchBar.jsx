@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.scss";
-import SmallButton from "../../components/SmallButton";
-import TextField from "../../components/TextField";
+import TextField from "../TextField";
 import searchIcon from "./../../assets/icons/icons8-search-100.png";
 
 const SearchBar = () => {

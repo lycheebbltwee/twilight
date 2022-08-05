@@ -1,3 +1,20 @@
+@use "./../../assets/partials/devices.scss";
+
 .Home {
     display: flex;
+
+    @include devices.phone {
+        flex-direction: column-reverse;
+    }
+
+    @include devices.large-phone {
+        flex-direction: column-reverse;
+    }
+
+    @include devices.laptop {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70vh;
+    }
 }

@@ -4,6 +4,10 @@
 .SmallButton {
     border: 2px solid palette.$dark-brown;
     border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     // margin: 0 0.5rem;
 
@@ -18,7 +22,6 @@
     & a {
         background-color: transparent;
         display: block;
-        height: 100%;
         text-align: center;
         margin: auto;
         overflow: hidden;
@@ -55,9 +58,9 @@
         min-height: 1rem;
 
         & img {
-            max-width: 72%;
-            max-height: 72%;
-            padding: 0.35rem;
+            margin-top: 3px;
+            width: 65%;
+            height: 65%;
         }
     }
 
@@ -66,9 +69,9 @@
         height: 2.65rem;
 
         & img {
-            max-width: 72%;
-            max-height: 72%;
-            padding: 0.35rem;
+            margin-top: 2px;
+            width: 72%;
+            height: 72%;
         }
     }
 
@@ -77,9 +80,8 @@
         height: 2.5rem;
 
         & img {
-            height: 65%;
-            margin: auto;
-            padding: 0.4rem;
+            height: 50%;
+            width: 50%;
         }
     }
 
@@ -88,8 +90,8 @@
         height: 3rem;
 
         & img {
-            height: 60%;
-            padding: 0.5rem;
+            height: 40%;
+            width: 40%;
         }
     }
 }
