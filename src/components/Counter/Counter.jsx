@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import styles from "./Counter.module.scss";
 
-const Counter = ({ productStock }) => {
-    const [quantity, setQuantity] = useState(0);
-
+const Counter = ({ count, changeQty }) => {
     const handleIncrement = () => {
-        if (quantity === 0) return alert("Out of stock");
-        if (quantity < productStock) setQuantity(quantity + 1);
+        if (count < 10) changeQty(count + 1);
     };
 
     const handleDecrement = () => {
-        if (quantity > 0) setQuantity(quantity - 1);
+        if (count > 0) changeQty(count - 1);
     };
 
     return (
         <div className={styles.Counter}>
             <button onClick={handleDecrement}>-</button>
-            <p>{quantity}</p>
+            <p>{count}</p>
             <button onClick={handleIncrement}>+</button>
         </div>
     );

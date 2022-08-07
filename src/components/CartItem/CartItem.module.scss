@@ -1,0 +1,9 @@
+@use "./../../assets/partials/palette.scss";
+
+.CartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    border-bottom: 1.5px solid palette.$beige;
+}

@@ -14,13 +14,10 @@
         margin-top: 2rem;
     }
 
-    @include devices.tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 3rem auto;
-    }
-
     @include devices.desktop {
         flex-direction: row;
+        justify-content: space-between;
+        height: 60vh;
+        margin: 4rem auto 0;
     }
 }

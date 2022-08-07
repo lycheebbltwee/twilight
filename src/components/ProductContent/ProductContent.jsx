@@ -1,10 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 import LargeButton from "../LargeButton";
 import buttonStyle from "./../LargeButton/LargeButton.module.scss";
 import styles from "./ProductContent.module.scss";
 
 const ProductContent = ({ product, onChange }) => {
-    const { name, description, price, imageLink, favourite } = product;
+    const { id, name, description, price, imageLink, favourite, stock } =
+        product;
+
+    const { cart, setCart } = useContext(CartContext);
+
+    // Adding products to cart
+    const addToCart = () => {
+        if (stock === 0) {
+            return alert("Out of stock");
+        }
+
+        const copyOf = [...cart];
+        const newItem = { id, name, price, quantity: 1 };
+
+        const currentCart = cart.some((product) => newItem.id === product.id);
+        const index = cart.map((product) => product.id).indexOf(newItem.id);
+
+        if (currentCart === true) {
+            copyOf[index].quantity += 1;
+        } else {
+            copyOf.push(newItem);
+        }
+
+        setCart(copyOf);
+    };
 
     // Setting a product as a favourited
     const [favouriteProduct, setFavouriteProduct] = useState(favourite);
@@ -39,7 +64,10 @@ const ProductContent = ({ product, onChange }) => {
                         </button>
                     </LargeButton>
                     <LargeButton>
-                        <button className={buttonStyle.LargeButton}>
+                        <button
+                            className={buttonStyle.LargeButton}
+                            onClick={addToCart}
+                        >
                             Add to cart
                         </button>
                     </LargeButton>

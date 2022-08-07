@@ -9,6 +9,8 @@ import Home from "./containers/Home";
 import ProductGrid from "./containers/ProductGrid";
 import ProductPage from "./containers/ProductPage";
 import Favourites from "./containers/Favourites";
+import CartProvider from "./context/cartContext";
+import Cart from "./containers/Cart/Cart";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -29,31 +31,33 @@ function App() {
     }, []);
 
     return (
-        <BrowserRouter>
-            <Nav />
-            <Routes>
-                <Route path="/" element={<Home productData={products} />} />
-                <Route
-                    path="/products"
-                    element={<ProductGrid productData={products} />}
-                />
-                <Route
-                    path="/products/:id"
-                    element={
-                        <ProductPage
-                            productData={products}
-                            onChange={handleChange}
-                        />
-                    }
-                />
-                <Route
-                    path="/favourites"
-                    element={<Favourites productData={products} />}
-                />
-                <Route path="/cart" element={<h1>Cart</h1>} />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
+        <CartProvider>
+            <BrowserRouter>
+                <Nav />
+                <Routes>
+                    <Route path="/" element={<Home productData={products} />} />
+                    <Route
+                        path="/products"
+                        element={<ProductGrid productData={products} />}
+                    />
+                    <Route
+                        path="/products/:id"
+                        element={
+                            <ProductPage
+                                productData={products}
+                                onChange={handleChange}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/favourites"
+                        element={<Favourites productData={products} />}
+                    />
+                    <Route path="/cart" element={<Cart />} />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </CartProvider>
     );
 }
 

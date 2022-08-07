@@ -11,6 +11,11 @@
     @include devices.large-phone {
         margin-top: 1.5rem;
     }
+
+    @include devices.laptop {
+        height: 60vh;
+        margin: 4rem auto 0;
+    }
 }
 .ProductGrid {
     display: grid;

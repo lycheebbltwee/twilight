@@ -39,11 +39,6 @@
         &:active {
             color: palette.$dark-brown;
         }
-
-        &:focus {
-            color: palette.$dark-brown;
-            background-color: palette.$beige;
-        }
     }
 
     & > div {
