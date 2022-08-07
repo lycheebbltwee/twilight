@@ -2,11 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getProducts } from "./services/server";
+import { getProducts, updateProduct } from "./services/server";
 import Nav from "./containers/Nav";
 import Footer from "./containers/Footer";
 import Home from "./containers/Home";
 import ProductGrid from "./containers/ProductGrid";
+import ProductPage from "./containers/ProductPage";
+import Favourites from "./containers/Favourites";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -14,6 +16,12 @@ function App() {
     const getData = async () => {
         const data = await getProducts();
         setProducts(data);
+    };
+
+    const handleChange = async (newRecord) => {
+        const { id, ...record } = newRecord;
+        await updateProduct(id, record);
+        getData();
     };
 
     useEffect(() => {
@@ -29,8 +37,19 @@ function App() {
                     path="/products"
                     element={<ProductGrid productData={products} />}
                 />
-                <Route path="" element={<h1>Product Page</h1>} />
-                <Route path="/favourites" element={<h1>Favourites</h1>} />
+                <Route
+                    path="/products/:id"
+                    element={
+                        <ProductPage
+                            productData={products}
+                            onChange={handleChange}
+                        />
+                    }
+                />
+                <Route
+                    path="/favourites"
+                    element={<Favourites productData={products} />}
+                />
                 <Route path="/cart" element={<h1>Cart</h1>} />
             </Routes>
             <Footer />

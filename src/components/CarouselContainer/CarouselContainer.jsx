@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 const CarouselContainer = ({ products }) => {
     return (
         <div className={styles.CarouselContainer}>
-            <Carousel fade>
+            <Carousel fade className={styles.Carousel}>
                 {products
                     .filter((product) => product.featured === true)
                     .map((featuredProduct, index) => {

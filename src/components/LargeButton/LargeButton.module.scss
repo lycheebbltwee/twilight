@@ -2,16 +2,18 @@
 @use "./../../assets/partials/devices.scss";
 
 .LargeButton {
-    // border: 2px solid palette.$dark-brown;
+    border: none;
     border-radius: 3rem;
     background-color: palette.$beige;
+    color: palette.$dark-brown;
     transition-duration: 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     &:hover {
-        background-color: palette.$dark-brown;
+        background-color: palette.$brown;
     }
 
     & a {
@@ -57,7 +59,7 @@
     }
 
     @include devices.tablet {
-        width: 40%;
+        width: 15rem;
         height: 2.5rem;
         margin: 1rem auto;
         margin-left: 0;

@@ -51,7 +51,7 @@ export const products = [
             "https://images.pexels.com/photos/6342147/pexels-photo-6342147.jpeg",
         stock: 150,
         favourite: false,
-        featured: true,
+        featured: false,
     },
     {
         name: "Single Drop Orb Pendant",

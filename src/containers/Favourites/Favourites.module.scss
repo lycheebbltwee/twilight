@@ -1,0 +1,11 @@
+@use "./../../assets/partials/devices.scss";
+
+.Favourites {
+    width: 90%;
+    margin: 3rem auto;
+    display: grid;
+
+    @include devices.laptop {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

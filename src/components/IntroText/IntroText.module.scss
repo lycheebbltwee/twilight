@@ -1,8 +1,32 @@
 @use "./../../assets/partials/devices";
+@use "./../../assets/partials/palette.scss";
 
 .IntroText {
     & p {
         font-size: 1.2rem;
+    }
+
+    & h1 {
+        line-height: normal;
+        font-family: ballare, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    & a {
+        text-decoration: none;
+
+        &:link {
+            color: palette.$dark-brown;
+        }
+
+        &:visited {
+            color: palette.$dark-brown;
+        }
+
+        &:active {
+            color: palette.$dark-brown;
+        }
     }
 
     @include devices.phone {
@@ -13,6 +37,12 @@
 
         & p {
             text-align: center;
+        }
+    }
+
+    @include devices.large-phone {
+        & h1 {
+            font-size: 6rem;
         }
     }
 }

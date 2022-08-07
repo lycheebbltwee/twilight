@@ -1,5 +1,26 @@
 @use "./../../assets/partials/devices.scss";
 
 .Home {
-    width: 100%;
+    width: 90%;
+    display: flex;
+
+    @include devices.phone {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+    }
+
+    @include devices.large-phone {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+    }
+
+    @include devices.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem auto;
+    }
+
+    @include devices.desktop {
+        flex-direction: row;
+    }
 }

@@ -1,0 +1,25 @@
+@use "./../../assets/partials/palette.scss";
+
+.Counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 7rem;
+
+    button {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: palette.$beige;
+        color: palette.$dark-brown;
+
+        &:hover {
+            background-color: palette.$brown;
+        }
+    }
+
+    p {
+        margin: auto;
+    }
+}

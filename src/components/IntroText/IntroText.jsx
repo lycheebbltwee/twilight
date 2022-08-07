@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LargeButton from "../LargeButton/LargeButton";
 import styles from "./IntroText.module.scss";
+import buttonStyle from "../LargeButton/LargeButton.module.scss";
 
 const IntroText = () => {
     return (
@@ -10,7 +11,11 @@ const IntroText = () => {
             <p>The lights turn on </p>
             <p>when the sun goes down.</p>
             <LargeButton>
-                <Link to="/products">Shop now</Link>
+                <Link to="/products">
+                    <button className={buttonStyle.LargeButton}>
+                        Shop now
+                    </button>
+                </Link>
             </LargeButton>
         </div>
     );

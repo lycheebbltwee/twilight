@@ -32,6 +32,7 @@
         border-radius: 1rem;
         box-shadow: 0 0 5px 0 rgba(84, 72, 67, 0.2),
             0 3px 10px 0 rgba(74, 72, 67, 0.2);
+        z-index: 5;
     }
 
     @include devices.large-phone {
@@ -49,6 +50,7 @@
         border-radius: 1rem;
         box-shadow: 0 0 5px 0 rgba(84, 72, 67, 0.2),
             0 3px 10px 0 rgba(74, 72, 67, 0.2);
+        z-index: 5;
     }
 
     @include devices.tablet {
