@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../context/cartContext";
+import { updateCartItemQty } from "../../services/cartServer";
 import Counter from "../Counter/Counter";
 import styles from "./CartItem.module.scss";
 
 const CartItem = ({ product, removeFromCart }) => {
     const { id, name, price, quantity } = product;
     const [itemQty, setItemQty] = useState(quantity);
+    const { setCart } = useContext(CartContext);
 
     const handleQtyChange = (newQty) => {
         setItemQty(newQty);
-        product.quantity = newQty;
+        updateCartItemQty(id, newQty).then((items) => setCart(items));
     };
 
     useEffect(() => {
@@ -28,7 +31,11 @@ const CartItem = ({ product, removeFromCart }) => {
                 <p>${price} / per item</p>
             </div>
             <div>
-                <Counter count={itemQty} changeQty={handleQtyChange} />
+                <Counter
+                    count={itemQty}
+                    changeQty={handleQtyChange}
+                    productId={id}
+                />
                 <p>${price * quantity}</p>
             </div>
         </div>
