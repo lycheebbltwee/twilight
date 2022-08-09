@@ -2,9 +2,7 @@
 
 .Footer {
     text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
+    padding: 5rem 0;
 
     & p {
         margin-bottom: 0.5rem;
@@ -14,7 +12,7 @@
         padding-bottom: 5rem;
     }
 
-    @include devices.desktop {
+    @include devices.laptop {
         position: relative;
         bottom: 0;
     }

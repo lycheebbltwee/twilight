@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
+import { DataContext } from "../../context/dataContext";
 import styles from "./Favourites.module.scss";
 
-const Favourites = ({ productData }) => {
+const Favourites = () => {
+    const { products } = useContext(DataContext);
+
     return (
         <div className={styles.Favourites}>
-            {productData
-                .filter((products) => products.favourite === true)
+            {products
+                .filter((product) => product.favourite === true)
                 .map((favouritedProduct) => {
                     return (
-                        <ProductCard
+                        <Link
+                            to={`/products/${favouritedProduct.id}`}
                             key={favouritedProduct.id}
-                            product={favouritedProduct}
-                        />
+                        >
+                            <ProductCard product={favouritedProduct} />
+                        </Link>
                     );
                 })}
         </div>

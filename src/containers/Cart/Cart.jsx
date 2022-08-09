@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import CartItem from "../../components/CartItem/CartItem";
+import LargeButton from "../../components/LargeButton";
 import { CartContext } from "../../context/cartContext";
 import styles from "./Cart.module.scss";
+import buttonStyle from "./../../components/LargeButton/LargeButton.module.scss";
 
 const Cart = () => {
     const { cart, setCart } = useContext(CartContext);
@@ -24,7 +26,7 @@ const Cart = () => {
 
     return (
         <div className={styles.Cart}>
-            <div>
+            <div className={styles.Cart_left}>
                 <h2>Cart</h2>
                 {cart.map((products) => {
                     return (
@@ -36,21 +38,28 @@ const Cart = () => {
                     );
                 })}
             </div>
-            <div>
-                <span>
-                    <p>Order summary</p>
-                </span>
+            <div className={styles.Cart_right}>
+                <div className={styles.Cart_right__border}>
+                    <span>
+                        <p>Order summary</p>
+                    </span>
 
-                {totalPrice !== 0 ? (
-                    <div>
-                        <p>Subtotal</p>
-                        <span>
-                            <p>${totalPrice}</p>
-                        </span>
-                    </div>
-                ) : (
-                    <p>Nothing in cart</p>
-                )}
+                    {totalPrice !== 0 ? (
+                        <div>
+                            <p>Subtotal</p>
+                            <span>
+                                <p>${totalPrice}</p>
+                            </span>
+                        </div>
+                    ) : (
+                        <p>Nothing in cart</p>
+                    )}
+                </div>
+                <LargeButton>
+                    <button className={buttonStyle.LargeButton}>
+                        Proceed to checkout &rarr;
+                    </button>
+                </LargeButton>
             </div>
         </div>
     );
