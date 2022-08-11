@@ -21,6 +21,7 @@ const ProductContent = ({ product }) => {
         }
         const newItem = { id, name, price };
         addItemToCart(newItem).then((items) => setCart(items));
+        alert("Item added to cart!");
     };
 
     // Setting a product as a favourited

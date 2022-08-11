@@ -18,11 +18,17 @@
 
     @include devices.laptop {
         .Carousel {
-            width: 80vh;
-            height: 53vh;
+            width: 65vh;
+            height: 40vh;
             overflow: hidden;
         }
     }
+
+    // @include devices.desktop {
+    //     .Carousel {
+    //         width: ;
+    //     }
+    // }
 }
 
 // Redefining to override Bootstrap CSS
@@ -39,7 +45,7 @@ body {
     background-color: #f2e8e3;
     margin: 2.5% auto;
     box-sizing: border-box;
-    max-inline-size: 1400px;
+    max-inline-size: 1600px;
     max-block-size: 90%;
     padding: 0 3%;
     color: #6b4a3e;

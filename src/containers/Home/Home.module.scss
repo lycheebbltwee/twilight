@@ -1,7 +1,7 @@
 @use "./../../assets/partials/devices.scss";
 
 .Home {
-    width: 90%;
+    width: 100%;
     display: flex;
 
     @include devices.phone {
@@ -14,10 +14,17 @@
         margin-top: 2rem;
     }
 
-    @include devices.desktop {
+    @include devices.laptop {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        column-gap: 2rem;
         height: 70vh;
+        margin: 4rem auto 0;
+    }
+
+    @include devices.desktop {
+        height: 65vh;
         margin: 4rem auto 0;
     }
 }
